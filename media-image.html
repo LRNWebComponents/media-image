@@ -1,8 +1,8 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../hax-body-behaviors/hax-body-behaviors.html">
+<link rel="import" href="../schema-behaviors/schema-behaviors.html">
 <link rel="import" href="../iron-image/iron-image.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
-
 <!--
 `media-image`
 A LRN element
@@ -73,7 +73,7 @@ A LRN element
       }
     </style>
 
-    <iron-image src$="[[source]]" alt$="[[alt]]"></iron-image>
+    <iron-image resource$="[[schemaResourceID]]-image" src$="[[source]]" alt$="[[alt]]"></iron-image>
     <div class="citation">[[citation]]</div>
     <div class="caption">
       <slot name="caption"></slot>
@@ -84,7 +84,7 @@ A LRN element
   <script>
     Polymer({
       is: 'media-image',
-      behaviors: [HAXBehaviors.PropertiesBehaviors],
+      behaviors: [HAXBehaviors.PropertiesBehaviors,SchemaBehaviors.Schema],
       properties: {
         /**
          * Image source.
@@ -149,6 +149,13 @@ A LRN element
           'canScale': true,
           'canPosition': true,
           'canEditSource': false,
+          'prototype': {
+            'tag': 'media-image',
+            'properties': {
+              'source': 'assets/placeholder.jpg',
+            },
+            'content': '',
+          },
           'settings': {
             "quick": [
               {

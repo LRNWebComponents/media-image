@@ -9,7 +9,8 @@
     "iron-image": "PolymerElements/iron-image#^2.1.2",
     "img-pan-zoom": "ryanburns23/img-pan-zoom#^2.0.0",
     "lrnsys-layout": "LRNWebComponents/lrnsys-layout#^1.0.7",
-    "hax-body-behaviors": "LRNWebComponents/hax-body-behaviors#^1.2.0"
+    "hax-body-behaviors": "LRNWebComponents/hax-body-behaviors#^1.2.0",
+    "schema-behaviors": "LRNWebComponents/schema-behaviors#^0.1.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
