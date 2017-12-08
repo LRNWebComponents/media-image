@@ -84,7 +84,7 @@ A LRN element
   <script>
     Polymer({
       is: 'media-image',
-      behaviors: [HAXBehaviors.PropertiesBehaviors,SchemaBehaviors.Schema],
+      behaviors: [HAXBehaviors.PropertiesBehaviors, SchemaBehaviors.Schema],
       properties: {
         /**
          * Image source.
@@ -149,12 +149,21 @@ A LRN element
           'canScale': true,
           'canPosition': true,
           'canEditSource': false,
-          'prototype': {
-            'tag': 'media-image',
-            'properties': {
-              'source': 'assets/placeholder.jpg',
-            },
-            'content': '',
+          'gizmo': {
+            'title': 'Styled image',
+            'descrption': 'An image gizmo with the ability to provide simple, consistent styling and accessibility options.',
+            'icon': 'editor:insert-photo',
+            'color': 'indigo',
+            'groups': ['Image', 'Media'],
+            'handles': [
+              {
+                'type': 'image',
+                'url': 'source'
+              }
+            ],
+            'meta': {
+              'author': 'LRNWebComponents'
+            }
           },
           'settings': {
             "quick": [
